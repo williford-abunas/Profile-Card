@@ -1,0 +1,19 @@
+.card {
+  @apply w-[480px] h-[650px] mx-auto mt-11 border-solid border-2 border-slate-900 rounded-md;
+}
+
+.profileImage {
+  @apply h-72 w-80 mx-auto;
+}
+
+.title {
+  @apply text-3xl p-4 text-center font-semibold;
+}
+
+.description {
+  @apply text-justify px-4 text-lg;
+}
+
+.skillsContainer {
+  @apply flex flex-row flex-wrap px-4 items-start mt-2;
+}
