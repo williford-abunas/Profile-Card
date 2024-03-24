@@ -1,7 +1,7 @@
 .skillName {
-  @apply p-1 text-lg font-semibold;
+  @apply p-1 text-base font-semibold;
 }
 
 .skillsContainer {
-  @apply mr-1 rounded-md px-2 text-white;
+  @apply mr-1 mb-2 rounded-md px-2 text-white;
 }

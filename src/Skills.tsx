@@ -1,18 +1,26 @@
 import styles from './Skills.module.css';
 
 interface skillProps {
-  skillName: string;
-  skillEmoji: string;
-  bgColor: string;
+  key: number;
+  skillObj: {
+    skill: string;
+    level: string;
+    color: string;
+  };
 }
 
-function Skills({ skillName, skillEmoji, bgColor }: skillProps) {
+function Skills({ key, skillObj }: skillProps) {
   return (
-    <div className={styles['skillsContainer']} style={{ backgroundColor: bgColor }}>
+    <li className={styles['skillsContainer']} style={{ backgroundColor: skillObj.color }} key={key}>
       <p className={styles['skillName']}>
-        {skillName} <span>{skillEmoji}</span>
+        {skillObj.skill}{' '}
+        <span>
+          {skillObj.level === 'beginner' && '💩'}
+          {skillObj.level === 'intermediate' && '❤️'}
+          {skillObj.level === 'advanced' && '👌'}
+        </span>
       </p>
-    </div>
+    </li>
   );
 }
 
